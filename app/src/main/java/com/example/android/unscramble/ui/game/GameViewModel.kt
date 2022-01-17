@@ -1,6 +1,5 @@
 package com.example.android.unscramble.ui.game
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -55,7 +54,6 @@ class GameViewModel : ViewModel() {
     }
 
     init {
-        Log.d("GameFragment", "GameViewMode created")
         getNextWord()
     }
 
@@ -73,7 +71,6 @@ class GameViewModel : ViewModel() {
     fun isUserWordCorrect(playerWord: String) : Boolean {
         return if (playerWord.equals(currentWord)) {
             increaseScore()
-            Log.i("test", "${ score }")
             true
         } else false
     }
